@@ -1,0 +1,21 @@
+<!-- views/layout.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/">Home</a>
+    <a href="/services">Our Services</a>
+    <a href="/contact">Contact Us</a>
+    <a href="/blog">Blog</a>
+  </nav>
+  <main class="content">
+    <%- body %> <!-- Use unescaped output for raw HTML -->
+  </main>
+</body>
+</html>

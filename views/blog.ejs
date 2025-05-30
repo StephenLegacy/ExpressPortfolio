@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+  <title>Blog | Stephen Oloo</title>
+</head>
+<body>
+  <%- include('partials/navbar') %>
+
+  <main class="glass-container">
+    <section class="glass-card">
+      <h1>Welcome to My Blog</h1>
+      <p>Sharing insights on tech, cloud, and security. Check out my latest posts below:</p>
+    </section>
+
+    <% const blogs = [
+      { title: "5 Tips for AWS Beginners", summary: "Getting started with AWS? Here are 5 must-know tips for a smooth journey.", date: "2025-05-01" },
+      { title: "Modern Web Dev Stack", summary: "A breakdown of my favorite tech stack for building fast, modern apps.", date: "2025-04-24" },
+      { title: "Cyber Hygiene 101", summary: "Protect yourself online with these basic but powerful habits.", date: "2025-04-15" },
+      { title: "Why I Love Glassmorphism", summary: "The design trend that makes every app look fresh and futuristic.", date: "2025-04-08" },
+      { title: "Learning German with Code", summary: "How coding and language learning go hand-in-hand.", date: "2025-03-30" }
+    ]; %>
+
+    <% blogs.forEach(blog => { %>
+      <article class="glass-card">
+        <h2><%= blog.title %></h2>
+        <small><%= blog.date %></small>
+        <p><%= blog.summary %></p>
+      </article>
+    <% }); %>
+
+    <% /*
+    // Uncomment and use this when integrating real data
+    if (blogPosts && blogPosts.length > 0) {
+      blogPosts.forEach(post => {
+    %>
+      <article class="glass-card">
+        <h2><%= post.title %></h2>
+        <small><%= post.date %></small>
+        <p><%= post.summary %></p>
+      </article>
+    <% 
+      });
+    }
+    */ %>
+
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
